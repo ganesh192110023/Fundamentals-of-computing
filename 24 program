@@ -1,0 +1,27 @@
+#include <stdio.h>
+
+int binary_multiplication(int a, int b)
+{
+    int res = 0, temp = a;
+    while (b > 0) {
+        if (b & 1) {
+            res += temp;
+        }
+    
+    }
+    return res;
+}
+
+int main()
+{
+    int a, b;
+
+    printf("Enter first binary number: ");
+    scanf("%d", &a);
+    printf("Enter second binary number: ");
+    scanf("%d", &b);
+
+    printf("Product of two binary numbers: %d", binary_multiplication(a, b));
+
+    return 0;
+}
