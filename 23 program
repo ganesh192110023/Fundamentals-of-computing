@@ -1,0 +1,38 @@
+#include <stdio.h>
+
+void binary_subtraction(int a, int b)
+{
+    int borrow = 0;
+    int diff[10];
+    int i;
+
+    for(i = 0; i < 8; i++)
+    {
+        diff[i] = ((a % 10) - borrow - (b % 10)) % 2;
+        if((a % 10) - borrow < (b % 10))
+            borrow = 1;
+        else
+            borrow = 0;
+
+        a = a / 10;
+        b = b / 10;
+    }
+
+    printf("Difference of two binary numbers: ");
+    for(i = 7; i >= 0; i--)
+        printf("%d", diff[i]);
+}
+
+int main()
+{
+    int a, b;
+
+    printf("Enter first binary number: ");
+    scanf("%d", &a);
+    printf("Enter second binary number: ");
+    scanf("%d", &b);
+
+    binary_subtraction(a, b);
+
+    return 0;
+}
