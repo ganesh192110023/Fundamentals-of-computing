@@ -1,0 +1,14 @@
+echo "Enter a number:"
+read number
+orginal_number=$number
+reverse_number=0
+while [ $number -gt 0 ]; do
+        remainder=$(($number % 10))
+        reverse_number=$(($reverse_number * 10 + $remainder))
+        number=$(($number / 10))
+done
+if [ $orginal_number -eq $reverse_number ]; then
+        echo "The number is palindrome"
+else
+        echo "The number is not a palindrome"
+fi
