@@ -1,0 +1,10 @@
+echo "Enter tne side of a square:"
+read s
+echo "Enter the length and bredth of the rectangle:"
+read leng
+read brea
+echo "Enter the radus of the circle:"
+read radius
+echo "Area of the square is:'expr $s \*$s'"
+echo "Area of the rectangle is:'expr $leng \*$brea'"
+echo "Area of the circle is:'expr 3.14 \*radius \*radius'"
